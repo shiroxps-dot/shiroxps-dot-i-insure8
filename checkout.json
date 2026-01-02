@@ -1,0 +1,19 @@
+// ฟังก์ชันสำหรับไปหน้าชำระเงิน
+function goToCheckout() {
+    let cart = JSON.parse(localStorage.getItem('insureCart')) || [];
+    
+    if (cart.length === 0) {
+        alert('รถเข็นของคุณว่างเปล่า กรุณาเลือกคอร์สเรียนก่อนชำระเงินครับ');
+        window.location.href = 'courses.html';
+        return;
+    }
+
+    // คำนวณยอดรวมสุทธิอีกครั้งเพื่อความถูกต้องก่อนส่งไปหน้าถัดไป
+    let totalAmount = cart.reduce((sum, item) => sum + item.price, 0);
+    
+    // เก็บยอดรวมไว้ใน localStorage เพื่อให้หน้า checkout ดึงไปแสดงผลได้ง่ายๆ
+    localStorage.setItem('insure_total_payment', totalAmount);
+    
+    // ส่งผู้ใช้ไปยังหน้า checkout.html
+    window.location.href = 'checkout.html';
+}

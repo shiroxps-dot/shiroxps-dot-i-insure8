@@ -1,0 +1,555 @@
+/* --- 1. Global & Reset Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sarabun', sans-serif;
+}
+
+body {
+    background-color: #f8fafc; /* พื้นหลังสีสว่างโทนสะอาดตา */
+    color: #1e293b;           /* ตัวอักษรสีเทาเข้มเกือบดำ */
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- 2. Navigation Header (สมบูรณ์ตามโครงสร้างที่คุณใช้) --- */
+.main-header {
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4%;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.logo-square-container {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 70px;
+    overflow: hidden;
+}
+
+.logo-square-container img {
+    width: 100%;
+    object-fit: contain;
+    
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-menu ul li a {
+    color: #475569;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-menu ul li a:hover, .nav-menu ul li a.active {
+    color: #007bff;
+}
+
+/* ปุ่ม Login กลมสไตล์ใหม่ */
+.btn-login-round, .btn-login-link {
+    border: 2px solid #007bff;
+    padding: 8px 25px;
+    border-radius: 50px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-login-round:hover, .btn-login-link:hover {
+    background: #007bff;
+    color: #ffffff;
+}
+
+/* --- 3. Hero Section (หน้าแรก) --- */
+.hero-section {
+    padding: 80px 4%;
+    background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+}
+
+.hero-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: #0f172a;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+.btn-primary-small {
+    background: #007bff;
+    color: #fff;
+    padding: 12px 35px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+/* --- 4. Cards & Content (ส่วนแสดงผลหลัก) --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 5%;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #0f172a;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.course-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* --- 5. ปุ่มรีวิว (ปรับให้เด่นและชัดที่สุด) --- */
+.review-action-container {
+    text-align: center;
+    margin: 80px 0;
+}
+
+.btn-review-highlight {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    background: linear-gradient(45deg, #0056b3, #00a2ff);
+    color: #ffffff;
+    padding: 20px 60px;
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-decoration: none;
+    border-radius: 100px;
+    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.4);
+    transition: 0.4s;
+    border: none;
+}
+
+.btn-review-highlight:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 123, 255, 0.5);
+    filter: brightness(1.1);
+}
+
+/* --- 6. Forms (ระบบฟอร์ม) --- */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    background: #fff;
+    color: #1e293b;
+}
+
+.input-group input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.btn-primary {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* --- 7. Cart & Checkout (รถเข็นและการจ่ายเงิน) --- */
+.cart-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #e2e8f0;
+}
+
+/* --- 8. Footer (ส่วนท้าย) --- */
+.main-footer {
+    background: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    padding: 80px 0 40px;
+    margin-top: 100px;
+    color: #64748b;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+.footer-social a {
+    color: #007bff;
+    font-size: 1.5rem;
+    margin-left: 20px;
+}
+
+/* --- 9. Responsive --- */
+@media (max-width: 992px) {
+    .cart-wrapper { grid-template-columns: 1fr; }
+    .hero-container { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 768px) {
+    .nav-menu { display: none; }
+    .footer-container { flex-direction: column; text-align: center; gap: 30px; }
+}
+.btn-add-cart {
+    background: #007bff; /* สีน้ำเงินสว่าง */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-add-cart:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.course-price {
+    font-weight: 800;
+    color: #1a2a6c;
+    font-size: 1.2rem;
+}
+/* กล่องเก็บรูปภาพ */
+.course-image-container {
+    width: 100%;
+    height: 180px; /* ปรับความสูงตามต้องการ */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden; /* ตัดส่วนที่เกินออก */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa; /* สีพื้นหลังสำรองกรณีรูปไม่ขึ้น */
+}
+
+/* ตัวรูปภาพ */
+.course-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ทำให้รูปขยายเต็มกล่องโดยไม่เสียสัดส่วน */
+    transition: transform 0.3s ease; /* เพิ่มเอฟเฟกต์เวลาเอาเมาส์ไปชี้ */
+}
+
+.card:hover .course-img {
+    transform: scale(1.1); /* รูปจะขยายขึ้นเล็กน้อยเมื่อ Hover */
+}
+/* Review Page Specific Styles */
+:root {
+    --primary-blue: #1a2a6c;
+    --accent-blue: #007bff;
+    --text-slate: #475569;
+}
+
+.reviews-container {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 4%;
+}
+
+.review-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.review-header h1 {
+    font-size: 3rem;
+    font-weight: 700; /* ปรับให้หนาเท่าหน้า About */
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+.review-header p {
+    font-weight: 300;
+    color: #64748b;
+    font-size: 1.2rem;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.review-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    transition: all 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-blue);
+    box-shadow: 0 15px 35px rgba(0,123,255,0.1);
+}
+
+.stars {
+    color: #fbbf24;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.review-content {
+    font-weight: 300; /* ฟอนต์เนื้อหาใช้แบบบางเพื่อให้ดูแพง */
+    line-height: 1.8;
+    color: var(--text-slate);
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+}
+
+.reviewer-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 25px;
+}
+
+.reviewer-avatar {
+    width: 48px;
+    height: 48px;
+    background: #eef2ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+.reviewer-info h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary-blue);
+}
+
+.reviewer-info span {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    font-weight: 300;
+}
+
+.btn-premium-review {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 45px;
+    background: linear-gradient(135deg, #1a2a6c 0%, #007bff 100%);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 10px 25px rgba(26, 42, 108, 0.25);
+    border: none;
+}
+
+.btn-premium-review .btn-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 2;
+}
+
+/* เอฟเฟกต์แสงวิ่งบนปุ่ม (Shimmer) */
+.btn-shimmer {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transition: all 0.6s;
+    z-index: 1;
+}
+
+/* Hover Effect */
+.btn-premium-review:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 123, 255, 0.4);
+}
+
+.btn-premium-review:hover .btn-shimmer {
+    left: 100%;
+}
+
+.btn-premium-review:active {
+    transform: translateY(-2px);
+}
+
+/* ปรับฟอนต์ไอคอนให้ดูพรีเมียม */
+.btn-premium-review i {
+    font-size: 0.9rem;
+    transition: transform 0.4s;
+}
+
+.btn-premium-review:hover i {
+    transform: rotate(15deg) scale(1.2);
+}
+
+.card {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+}
+
+.card:hover .course-img {
+    transform: scale(1.1);
+}
+
+.card:hover .course-overlay {
+    opacity: 1 !important;
+}
+
+.card h3:hover {
+    color: #007bff;
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-back:hover {
+    background: white;
+    color: #1a2a6c;
+    transform: translateX(-5px);
+}
+
+.btn-back i {
+    font-size: 0.8rem;
+}

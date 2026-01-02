@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายละเอียดคอร์ส - I-INSURE 8</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #fcfdfe; font-family: 'Kanit', sans-serif; margin: 0; }
+        
+        .course-hero {
+            background: linear-gradient(135deg, #1a2a6c 0%, #007bff 100%);
+            padding: 100px 5% 150px;
+            color: white;
+            text-align: center;
+        }
+
+        .course-container {
+            max-width: 1200px;
+            margin: -80px auto 80px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        /* ฝั่งเนื้อหาหลัก */
+        .course-main {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: #1a2a6c;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .content-list { list-style: none; padding: 0; }
+        .content-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid #f1f5f9;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 300;
+        }
+
+        /* ฝั่ง Sidebar (กล่องราคา) */
+        .course-sidebar {
+            position: sticky;
+            top: 120px;
+            height: fit-content;
+        }
+
+        .price-card {
+            background: white;
+            padding: 30px;
+            border-radius: 30px;
+            box-shadow: 0 25px 50px rgba(26, 42, 108, 0.1);
+            text-align: center;
+        }
+
+        .big-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a2a6c;
+            margin: 20px 0;
+        }
+
+        .btn-buy-now {
+            width: 100%;
+            padding: 18px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
+            margin-bottom: 15px;
+        }
+
+        .btn-buy-now:hover {
+            background: #1a2a6c;
+            transform: translateY(-3px);
+        }
+
+        .badge-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 25px;
+            text-align: left;
+        }
+
+        .badge-item {
+            font-size: 0.9rem;
+            color: #64748b;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        @media (max-width: 992px) {
+            .course-container { grid-template-columns: 1fr; }
+            .course-sidebar { position: static; }
+        }
+    </style>
+</head>
+<body>
+<section class="course-hero">
+    <div style="max-width: 1200px; margin: 0 auto 30px; text-align: left;">
+        <a href="courses.html" class="btn-back">
+            <i class="fa-solid fa-arrow-left"></i> กลับไปหน้าคอร์สเรียน
+        </a>
+    </div>
+
+    <h1 style="font-size: 2.5rem; margin-top: 20px; font-weight: 700;">การพิจารณารับประกันภัย</h1>
+    <p style="font-weight: 200; opacity: 0.9; max-width: 700px; margin: 20px auto;">ปูพื้นฐานสำคัญเพื่อก้าวสู่การเป็นนายหน้าประกันวินาศภัยมืออาชีพ</p>
+</section>
+
+
+
+<div class="course-container">
+    <main class="course-main">
+        <div class="section-title">
+            <i class="fa-solid fa-book-open" style="color: #007bff;"></i>
+            สิ่งที่คุณจะได้เรียนรู้
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 40px;">
+            <div class="badge-item"><i class="fa-solid fa-check-circle" style="color: #10b981;"></i> ความหมายและความสำคัญของความเสี่ยง</div>
+            <div class="badge-item"><i class="fa-solid fa-check-circle" style="color: #10b981;"></i> หลักการประกันภัยเบื้องต้น</div>
+            <div class="badge-item"><i class="fa-solid fa-check-circle" style="color: #10b981;"></i> ประเภทของการประกันวินาศภัย</div>
+            <div class="badge-item"><i class="fa-solid fa-check-circle" style="color: #10b981;"></i> การจัดการความเสี่ยงภัยเบื้องต้น</div>
+        </div>
+
+        <div class="section-title">
+            <i class="fa-solid fa-list-ul" style="color: #007bff;"></i>
+            เนื้อหาในหลักสูตร
+        </div>
+        <ul class="content-list">
+            <li><i class="fa-solid fa-file-pdf"></i> เอกสารการเรียนรู้</li>
+            <li><i class="fa-solid fa-play-circle"></i> วีดีโอ</li>
+            <li><i class="fa-solid fa-file-pdf"></i> แบบฝึกหัดและกิจกรรม</li>
+            <li><i class="fa-solid fa-file-pdf"></i> กิจกรรมกลุ่ม การสัมมนา และการฝึกอบรม</li>
+            <li><i class="fa-solid fa-file-pdf"></i> แบบทดสอบก่อนเรียนหลังเรียน</li>
+        </ul>
+    </main>
+
+    <aside class="course-sidebar">
+        <div class="price-card">
+            <img src="รูป3.png" style="width: 100%; border-radius: 20px; margin-bottom: 20px;" alt="คอร์ส">
+            <div style="color: #64748b; font-weight: 300;">ราคาคอร์สเรียน</div>
+            <div class="big-price">฿0.00</div>
+            
+            <button class="btn-buy-now" onclick="addToCart('คอร์สพื้นฐานประกันภัย', 1900)">
+                <i class="fa-solid fa-cart-plus" style="margin-right: 10px;"></i> หยิบลงตะกร้า
+            </button>
+            
+            <div class="badge-list">
+                <div class="badge-item"><i class="fa-solid fa-video"></i> เรียนออนไลน์ได้ทุกที่ 24 ชม.</div>
+                <div class="badge-item"><i class="fa-solid fa-infinity"></i> เข้าเรียนได้ไม่จำกัดระยะเวลา</div>
+                <div class="badge-item"><i class="fa-solid fa-certificate"></i> รับใบประกาศนียบัตรหลังเรียนจบ</div>
+            </div>
+        </div>
+    </aside>
+    <div class="price-card">
+    <button class="btn-buy-now" onclick="addToCart('คอร์สพื้นฐานประกันภัย', 1900)">
+        <i class="fa-solid fa-cart-plus"></i> หยิบลงตะกร้า
+    </button>
+    
+    <a href="courses.html" style="text-decoration: none; color: #94a3b8; font-size: 0.9rem; font-weight: 300; display: block; margin-top: 15px; transition: 0.3s;" onmouseover="this.style.color='#1a2a6c'" onmouseout="this.style.color='#94a3b8'">
+        <i class="fa-solid fa-chevron-left" style="font-size: 0.8rem;"></i> เลือกคอร์สอื่นเพิ่มเติม
+    </a>
+</div>
+</div>
+
+<script>
+// ฟังก์ชันเดิมที่คุณมีอยู่
+function addToCart(name, price) {
+    let cart = JSON.parse(localStorage.getItem('insureCart')) || [];
+    cart.push({ name: name, price: price });
+    localStorage.setItem('insureCart', JSON.stringify(cart));
+    if(confirm('เพิ่มลงรถเข็นแล้ว! ต้องการไปที่รถเข็นเลยหรือไม่?')) {
+        window.location.href = 'cart.html';
+    }
+}
+</script>
+
+</body>
+</html>
